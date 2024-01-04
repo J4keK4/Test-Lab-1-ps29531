@@ -1,0 +1,23 @@
+# Import thư viện GPIO
+import RPi.GPIO as GPIO
+
+# Chọn chân GPIO cho bóng đèn
+LED_PIN = 17
+
+# Thiết lập chân GPIO ở chế độ đầu ra
+GPIO.setup(LED_PIN, GPIO.OUT)
+
+# Bật bóng đèn
+GPIO.output(LED_PIN, True)
+
+# Đợi 1 giây
+time.sleep(1)
+
+# Tắt bóng đèn
+GPIO.output(LED_PIN, False)
+
+# Đợi 1 giây
+time.sleep(1)
+
+# Đóng GPIO
+GPIO.cleanup()
